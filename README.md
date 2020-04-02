@@ -34,4 +34,4 @@
 ### Subject
 막내 동생 팬페이지
 ### Result
-All Completed
+All Completed 👑👑
