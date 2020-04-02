@@ -1,0 +1,38 @@
+use jspdb;
+select * from `diary`;
+
+create table `member` (
+	username varchar(20) not null,
+    mobile varchar(20),
+    id varchar(20) not null primary key,
+    `password` varchar(20) not null
+);
+
+create table `diary`(
+    `date` datetime default now(),
+    title varchar(20) not null,
+    state varchar(20) default "happy",
+    weather varchar(20) default "맑음",
+    content varchar(200) default null,
+    self varchar(50) default "사랑해",
+    primary key(date)
+);
+
+insert into diary values(now(), "2019 11 22", "sad", "snowy", "멤버 CRUD 구현을 마쳤다. 얼른 쭉쭉 해나가자", "사랑해");
+insert into diary values(now(), "2019 11 23", "quiet", "rainy", "추가 기능을 제외한 모든 것을 끝내고 잘 예정이다. 날이 흐리다.", "보고싶어");
+insert into diary values(now(), "2019 11 24", "happy", "cool", "모든 과제가 끝나자마자 집으로 달려갈거다아아아아", "사랑해");
+insert into diary values(now(), "2019 11 25", "delighted", "warm", "구현이 끝나버렸다! 와아! 집에 가자!", "헤헤");
+
+insert into `member` values("채윤원", "010-9102-3813", "admin", "passwd");
+insert into `member` values("장보윤", "010-2732-0979", "boyun", "bopass");
+insert into `member` values("최수인", "010-6357-5824", "suin", "supass");
+insert into `member` values("이정민", "010-8788-3709", "jeongmin", "jeongpass");
+insert into `member` values("허훈식", "010-3740-3052", "hunsik", "hunpass");
+insert into `member` values("최재원", "010-3397-5492", "jaewon", "jaepass");
+insert into `member` values("전유미", "010-7159-1036", "yumi", "yupass");
+insert into `member` values("나세영", "010-3233-1023", "saeyoung", "saepass");
+insert into `member` values("이영주", "010-4168-2464", "youngju", "youngpass");
+insert into `member` values("한승훈", "010-3808-6902", "seunghun", "seungpass");
+insert into `member` values("김주영", "010-7622-9918", "juyoung", "jupass");
+insert into `member` values("방영철", "010-9025-0526", "youngchul", "youngpass");
+insert into `member` values("이영채", "010-9901-2087", "youngchae", "youngpass");
